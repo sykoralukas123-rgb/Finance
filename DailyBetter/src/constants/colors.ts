@@ -1,0 +1,56 @@
+export const Colors = {
+  dark: {
+    bg: '#0f0f0f',
+    bgCard: '#1a1a1a',
+    bgElevated: '#242424',
+    border: '#2a2a2a',
+    text: '#f5f5f5',
+    textSecondary: '#a0a0a0',
+    textMuted: '#606060',
+    primary: '#6366f1',
+    primaryLight: '#818cf8',
+    primaryDim: '#312e81',
+    accent: '#10b981',
+    accentDim: '#064e3b',
+    warn: '#f59e0b',
+    danger: '#ef4444',
+    xpBar: '#6366f1',
+    streakFire: '#f97316',
+    tabActive: '#6366f1',
+    tabInactive: '#404040',
+  },
+  light: {
+    bg: '#f8f8f8',
+    bgCard: '#ffffff',
+    bgElevated: '#f0f0f0',
+    border: '#e0e0e0',
+    text: '#111111',
+    textSecondary: '#555555',
+    textMuted: '#999999',
+    primary: '#4f46e5',
+    primaryLight: '#6366f1',
+    primaryDim: '#e0e7ff',
+    accent: '#059669',
+    accentDim: '#d1fae5',
+    warn: '#d97706',
+    danger: '#dc2626',
+    xpBar: '#4f46e5',
+    streakFire: '#ea580c',
+    tabActive: '#4f46e5',
+    tabInactive: '#9ca3af',
+  },
+};
+
+export const HabitColors = [
+  '#6366f1', '#8b5cf6', '#ec4899', '#ef4444',
+  '#f97316', '#f59e0b', '#10b981', '#14b8a6',
+  '#3b82f6', '#06b6d4',
+];
+
+export const AreaColors: Record<string, string> = {
+  finanzen: '#10b981',
+  studium: '#6366f1',
+  gesundheit: '#ef4444',
+  beruf: '#f59e0b',
+  persoenlich: '#8b5cf6',
+};
