@@ -1,25 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  background: #f8fafc;
-  font-family: 'Inter', system-ui, sans-serif;
-  color: #1e293b;
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-zinc-950 font-sans text-zinc-200 antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    @apply bg-amber-400/30 text-zinc-50;
+  }
 }
 
-#root {
-  width: 100%;
-  min-height: 100svh;
+/* Rendered markdown (articles, methodology) */
+.md {
+  @apply max-w-none text-[15px] leading-7 text-zinc-300;
 }
-
-/* Custom scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #f1f5f9; }
-::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
-::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+.md h2 {
+  @apply mb-3 mt-10 font-display text-2xl font-semibold text-zinc-50;
+}
+.md h3 {
+  @apply mb-2 mt-8 font-display text-xl font-semibold text-zinc-100;
+}
+.md p,
+.md ul,
+.md ol {
+  @apply my-4;
+}
+.md ul {
+  @apply list-disc pl-5;
+}
+.md ol {
+  @apply list-decimal pl-5;
+}
+.md li {
+  @apply my-1;
+}
+.md a {
+  @apply text-amber-400 underline underline-offset-2;
+}
+.md strong {
+  @apply font-semibold text-zinc-100;
+}
+.md code {
+  @apply rounded bg-zinc-800 px-1 py-0.5 font-mono text-[13px] text-amber-300;
+}
+.md pre {
+  @apply my-4 overflow-x-auto rounded-lg border border-zinc-800 bg-zinc-900 p-4;
+}
+.md pre code {
+  @apply bg-transparent p-0 text-zinc-300;
+}
+.md blockquote {
+  @apply my-4 border-l-2 border-amber-400/60 pl-4 text-zinc-400;
+}
+.md .md-table {
+  @apply my-5 overflow-x-auto rounded-lg border border-zinc-800;
+}
+.md table {
+  @apply w-full border-collapse text-sm;
+}
+.md th {
+  @apply whitespace-nowrap border-b border-zinc-800 bg-zinc-900 px-3 py-2 text-left font-mono text-[11px] font-medium uppercase tracking-wider text-zinc-500;
+}
+.md td {
+  @apply border-b border-zinc-800/60 px-3 py-2 font-mono text-[13px] text-zinc-300;
+}
+.md tr:last-child td {
+  @apply border-b-0;
+}
+.md .katex-display {
+  @apply my-5 overflow-x-auto overflow-y-hidden py-1;
+}
+.md .katex {
+  @apply text-zinc-100;
+  font-size: 1.05em;
+}

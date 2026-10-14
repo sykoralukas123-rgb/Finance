@@ -1,5 +1,5 @@
 {
-  "name": "finance",
+  "name": "sorare-model",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,11 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "date-fns": "^4.1.0",
+    "@supabase/supabase-js": "^2.117.3",
+    "katex": "^0.19.0",
     "lucide-react": "^1.8.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "recharts": "^3.8.1"
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.18.4",
+    "recharts": "^3.8.1",
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
